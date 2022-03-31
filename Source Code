@@ -1,0 +1,165 @@
+package com.example.Modul4;
+import java.util.Scanner;
+public class Tugas {
+
+    static void hamlet() {
+        System.out.println("Waduh!! Maaf sekali, tapi uangnya belum cukup!");
+        return;
+    }
+    static void othello() {
+        System.out.println("SELAMAT, KUDA INI TELAH MENJADI MILIK ANDA!!");
+        return;
+    }
+
+    public static void main(String[]args){
+        int pilihan,tambah,gender,hasil,ryanbright,doberramonu,kuda;
+        int saldo = 800000000;
+        int ryan = 600000000;
+        int bright = 750000000;
+        int dober = 720000000;
+        int ramonu = 600000000;
+        Scanner input = new Scanner (System.in);
+        while (true) {
+            System.out.println("-----= KATALOG MEJIRO 19XX =-----");
+            System.out.println("---------= OPSI KATALOG =---------");
+            System.out.println("-1. CEK SALDO         =-----------");
+            System.out.println("-2. MENABUNG          =-----------");
+            System.out.println("-3. TRANSAKSI         =-----------");
+            System.out.println("-4. KELUAR            =-----------");
+            System.out.println("-----------= ♩♪♩♪♩♪♩♪♩♪♪ =-----------");
+            System.out.println(       );
+            System.out.print("Jadi, Opsi Apa Yang Anda Ingin Lakukan Hari Ini? : ");
+            pilihan = Integer.parseInt(input.next());
+
+            switch(pilihan){
+                case 1 :
+                    System.out.println("Jumlah saldo anda yang tersimpan itu : Rp." + saldo + " loh! ");
+                    break;
+
+                case 2 :
+                    System.out.print("Jadi, berapa jumlah uang yang anda ingin tambahkan ke saldo? = Rp. ");
+                    tambah = input.nextInt();
+                    saldo += tambah;
+                    System.out.println("Uwaaaahh!! Saldo anda sekarang Rp." + saldo + "!");
+                    break;
+
+                case 3 :
+                    System.out.println("1. Jantan");
+                    System.out.println("2. Betina");
+                    System.out.println("    ");
+                    System.out.print("Ada kuda yang anda tertarik untuk dibeli? : ");
+                    gender = input.nextInt();
+                    if (gender == 1) {
+                        System.out.println("Jantan yang anda minati? Opsi yang ada di katalog ada :");
+                        System.out.println("    ");
+                        System.out.println("1. Mejiro Ryan");
+                        System.out.println("2. Mejiro Bright");
+                        ryanbright = input.nextInt();
+                        switch (ryanbright){
+                            case 1:
+                                System.out.println("Mejiro Ryan? Pilihan yang cukup solid.");
+                                System.out.println("Dia memenangkan G1 Takarazuka Kinen pada tahun 1991, mengalahkan Mejiro Mcqueen.");
+                                System.out.println("Apakah Anda Yakin ini kuda yang ingin anda beli? :");
+                                System.out.println("1. Ya");
+                                System.out.print("3. Tidak : ");
+                                kuda = input.nextInt();
+                                if (kuda == 1 );
+                                hasil = saldo - ryan;
+
+                                if (saldo > ryan){
+                                    othello();
+                                    System.out.println("Saldo anda sekarang ialah Rp" +hasil + "!");
+                                    saldo -= ryan;
+
+                                }
+                                else if(saldo < ryan){
+                                    hamlet();
+                                }
+                            case 2:
+                                System.out.println("Mejiro Bright kah? Salah satu dari 2 anak Mejiro Ryan?");
+                                System.out.println("Prestasi Bright yang paling populer ialah Juara 1 pada G1 Tenno Sho Musim Semi 1998");
+                                System.out.println("Apakah Anda Yakin ini kuda yang ingin anda beli? :");
+                                System.out.println("1. Ya");
+                                System.out.print("2. Tidak : ");
+                                kuda = input.nextInt();
+                                if (kuda == 1 );
+                                hasil = saldo - bright;
+
+                                if (saldo > bright){
+                                    othello();
+                                    System.out.println("Saldo anda sekarang ialah Rp" +hasil + "!");
+                                    saldo -= bright;
+
+                                }
+                                else if(saldo < bright){
+                                    hamlet();
+                                }
+
+                        }
+
+
+                    } else if (gender == 2) {
+                        System.out.println("Betina kah? Opsi yang ada di katalog ada:");
+                        System.out.println("    ");
+                        System.out.println("1. Mejiro Dober");
+                        System.out.println("2. Mejiro Ramonu");
+                        doberramonu = input.nextInt();
+                        switch (doberramonu){
+                            case 1:
+                                System.out.println("Mejiro Dober? Salah satu dari 2 anak Mejiro Ryan?");
+                                System.out.println("Kuda ini terkenal karena memenangkan G1 Queen Elizabeth Cup 2 kali berturut-turut pada tahun 1998&1999.");
+                                System.out.println("Apakah Anda Yakin ini kuda yang ingin anda beli? :");
+                                System.out.println("1. Ya");
+                                System.out.print("2. Tidak : ");
+                                kuda = input.nextInt();
+                                if (kuda == 1 );
+                                hasil = saldo - dober;
+
+                                if (saldo > dober){
+                                    othello();
+                                    System.out.println("Saldo anda sekarang ialah Rp" +hasil + "!");
+                                    saldo -= ryan;
+
+                                }
+                                else if(saldo < dober){
+                                    hamlet();
+                                }
+                            case 2:
+                                System.out.println("Anda ingin membeli Mejiro Ramonu?");
+                                System.out.println("Meskipun dia hanya pernah berlomba pada 1986, dia memenangkan 3 kejuaraan G1, jadi jangan diremehkan.");
+                                System.out.println("Apakah Anda Yakin ini kuda yang ingin anda beli? :");
+                                System.out.println("1. Ya");
+                                System.out.print("2. Tidak : ");
+                                kuda = input.nextInt();
+                                if (kuda == 1 );
+                                hasil = saldo - ramonu;
+
+                                if (saldo > ramonu){
+                                    othello();
+                                    System.out.println("Saldo anda sekarang ialah Rp" +hasil + "!");
+                                    saldo -= ramonu;
+
+                                }
+                                else if(saldo < ramonu){
+                                    hamlet();
+                                }
+
+                        }
+
+                        break;
+                    }
+                    break;
+
+                case 4 :
+                    System.out.println("Transaksi Kita Telah Selesai, Semoga Kita Bertemu Lagi!");
+                    System.out.println("----------------------= ♪♩♪♩♪♩♪♩♪♩♪♪ =--------------------");
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Anda ini... Jangan menginput seasalnya saja ya! Sudah ada opsi (1,2,3,4)!");
+                    break;
+            }
+        }
+    }
+}
